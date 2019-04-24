@@ -35,3 +35,4 @@ Now, two specific things I'd like to change are:
 * Modify the font specs used in section titles
 
 A solution to these two problems easily generalizes to the broader question of "How do I format the title and H1-H6 specs in the context of LaTeX rendering from `.Rmd` files?"
+
