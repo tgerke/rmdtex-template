@@ -36,6 +36,8 @@ Now, two specific things I'd like to change are:
 
 A solution to these two problems easily generalizes to the broader question of "How do I format the title and H1-H6 specs in the context of LaTeX rendering from `.Rmd` files?"
 
+---
+
 To start, we need to identify what LaTeX template R Markdown is currently using (h/t [SO](https://stackoverflow.com/questions/52706006/accessing-yaml-parameters-as-macros-within-external-latex-files/52779863#52779863)). The relevant remote repo is [here](https://github.com/rstudio/rmarkdown/tree/master/inst/rmd/latex), and you can copy the local version you're using into your working directory with this line: 
 
 ```
