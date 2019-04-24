@@ -8,6 +8,7 @@ output:
       keep_tex: true
 params: 
    subtitle: "FY 2018"
+   fancy: true
 geometry: margin=1in
 latex_engine: pdflatex
 ---

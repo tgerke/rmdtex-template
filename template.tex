@@ -255,8 +255,23 @@ $endfor$
 \sectionfont{\normalsize\normalfont\itshape}
 \subsectionfont{\normalsize\normalfont}
 
-\begin{document}
-$if(title)$
+% use fancyhdr style
+$if(params.fancy)$
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead[LO, LE]{$title$}
+\fancyhead[RO, RE]{$params.subtitle$}
+\makeatletter
+\renewcommand{\maketitle}{\bgroup\vspace*{-1cm}\setlength{\parindent}{0pt}
+\begin{flushleft}
+  \@author
+  
+  \@date
+  
+\end{flushleft}\egroup
+}
+\makeatother
+$else$
 \makeatletter
 \renewcommand{\maketitle}{\bgroup\vspace*{-2cm}\setlength{\parindent}{0pt}
 \begin{flushleft}
@@ -273,6 +288,10 @@ $if(title)$
 \end{flushleft}\egroup
 }
 \makeatother
+$endif$
+
+\begin{document}
+$if(title)$
 \maketitle
 $endif$
 $if(abstract)$

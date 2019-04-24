@@ -131,3 +131,7 @@ latex_engine: pdflatex
 ![Adding subtitle in maketitle](figures/subtitle.png)
 
 ![Edited render](figures/render4.png)
+
+With this trick, you can start to do even fancier things (literally), such as include `fancyhdr` options. 
+
+![Edited render](figures/fancy.png)
