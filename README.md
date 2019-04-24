@@ -44,3 +44,7 @@ To start, we need to identify what LaTeX template R Markdown is currently using 
 file.copy(system.file("rmd/latex/default-1.17.0.2.tex",
           package = "rmarkdown"), "template.tex")
 ```
+
+If you look past the pandoc nastiness in this template file (I at least find it nasty, being that I was mostly unfamiliar with pandoc scripting!), you'll see familiar LaTeX commands that are often surrounded by `$if(X)$` statements that are triggered if `X` appears in your `.Rmd` YAML. Here's a straightforward example where, if we have `title: ` in our `.Rmd` YAML header, the `\maketitle` command will be executed in your LaTeX render:
+
+![if(title)](figures/if-title.png)
