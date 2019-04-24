@@ -45,6 +45,29 @@ file.copy(system.file("rmd/latex/default-1.17.0.2.tex",
           package = "rmarkdown"), "template.tex")
 ```
 
-If you look past the pandoc nastiness in this template file (I at least find it nasty, being that I was mostly unfamiliar with pandoc scripting!), you'll see familiar LaTeX commands that are often surrounded by `$if(X)$` statements that are triggered if `X` appears in your `.Rmd` YAML. Here's a straightforward example where, if we have `title: ` in our `.Rmd` YAML header, the `\maketitle` command will be executed in your LaTeX render:
+If you look past the pandoc nastiness in this template file (I at least find it nasty, being that I was mostly unfamiliar with pandoc scripting!), you'll see familiar LaTeX commands that are often surrounded by `$if(X)$` statements that are triggered if `X` appears in your `.Rmd` YAML. Here's a straightforward example where, if you have `title:` in your `.Rmd` YAML header, the `\maketitle` command will be executed in your LaTeX render:
 
 ![if(title)](figures/if-title.png)
+
+Now the problem feels more tractable: all we have to do is modify the `\maketitle` defaults in the usual LaTeX manner within the `template.tex` document. Let's start with the following:
+
+![Edit 1](figures/edit1.png)
+
+And don't forget to include `template.tex` in your `.Rmd` YAML header like so:
+
+```
+---
+title: "A short report"
+author: "Travis Gerke"
+date: "`r format(Sys.time(), '%Y %B %d')`"
+output: 
+   pdf_document: 
+      template: template.tex
+      keep_tex: true
+latex_engine: pdflatex
+---
+```
+
+Rendering gives the below, nice!
+
+![Edited render](figures/render2.png)

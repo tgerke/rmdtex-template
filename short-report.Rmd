@@ -4,6 +4,7 @@ author: "Travis Gerke"
 date: "`r format(Sys.time(), '%Y %B %d')`"
 output: 
    pdf_document: 
+      template: template.tex
       keep_tex: true
 latex_engine: pdflatex
 ---

@@ -252,6 +252,18 @@ $endfor$
 
 \begin{document}
 $if(title)$
+\makeatletter
+\renewcommand{\maketitle}{\bgroup\vspace*{-2.5cm}\setlength{\parindent}{0pt}
+\begin{flushleft}
+  \textbf{\@title}
+  
+  \@author
+  
+  \@date
+  
+\end{flushleft}\egroup
+}
+\makeatother
 \maketitle
 $endif$
 $if(abstract)$
