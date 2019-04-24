@@ -76,7 +76,7 @@ Next, we clearly need to fix the fact that section titles are now larger than th
 
 ![Adding sectsty](figures/sectsty.png)
 
-Let's also reduce the overall margins a touch via the `geometry` argument in the YAML while we're at it. 
+Let's also reduce the overall margins a touch via the `geometry` argument in the YAML while we're at it. Here's the full `.Rmd`:
 
 ```
 ---
@@ -90,7 +90,44 @@ output:
 geometry: margin=1in
 latex_engine: pdflatex
 ---
+   
+# Introduction
+
+`r paste(stringi::stri_rand_lipsum(2), collapse = "\n\n")`
+
+# Progress
+
+`r paste(stringi::stri_rand_lipsum(2, start_lipsum = FALSE), collapse = "\n\n")`
+
+# Future Directions
+
+`r paste(stringi::stri_rand_lipsum(3, start_lipsum = FALSE), collapse = "\n\n")`
 ```
 
 ![Edited render](figures/render3.png)
 
+Mission accomplished!
+
+--- 
+
+Here's a bonus I learned along the way. You can send custom arguments to your `.tex` doc via YAML with the `params:` construction. Suppose I want an optional subtitle parameter. This is accomplished like so:
+
+```
+---
+title: "A short report"
+author: "Travis Gerke"
+date: "`r format(Sys.time(), '%Y %B %d')`"
+output: 
+   pdf_document: 
+      template: template.tex
+      keep_tex: true
+params: 
+   subtitle: "FY 2018"
+geometry: margin=1in
+latex_engine: pdflatex
+---
+```
+
+![Adding subtitle in maketitle](figures/subtitle.png)
+
+![Edited render](figures/render4.png)

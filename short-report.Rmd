@@ -6,6 +6,8 @@ output:
    pdf_document: 
       template: template.tex
       keep_tex: true
+params: 
+   subtitle: "FY 2018"
 geometry: margin=1in
 latex_engine: pdflatex
 ---
