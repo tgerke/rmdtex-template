@@ -1,0 +1,25 @@
+---
+title: "A short report"
+author: "Travis Gerke"
+date: "`r format(Sys.time(), '%Y %B %d')`"
+output: 
+   pdf_document: 
+   keep_tex: true
+latex_engine: pdflatex
+---
+   
+# Introduction
+
+`r paste(stringi::stri_rand_lipsum(3), collapse = "\n\n")`
+
+# Methods
+
+`r paste(stringi::stri_rand_lipsum(3, start_lipsum = FALSE), collapse = "\n\n")`
+
+# Results
+
+`r paste(stringi::stri_rand_lipsum(3, start_lipsum = FALSE), collapse = "\n\n")`
+
+# Discussion
+
+`r paste(stringi::stri_rand_lipsum(3, start_lipsum = FALSE), collapse = "\n\n")`
