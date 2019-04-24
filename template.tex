@@ -250,10 +250,15 @@ $for(header-includes)$
 $header-includes$
 $endfor$
 
+% change section title styling
+\usepackage{sectsty}
+\sectionfont{\normalsize\normalfont\itshape}
+\subsectionfont{\normalsize\normalfont}
+
 \begin{document}
 $if(title)$
 \makeatletter
-\renewcommand{\maketitle}{\bgroup\vspace*{-2.5cm}\setlength{\parindent}{0pt}
+\renewcommand{\maketitle}{\bgroup\vspace*{-2cm}\setlength{\parindent}{0pt}
 \begin{flushleft}
   \textbf{\@title}
   

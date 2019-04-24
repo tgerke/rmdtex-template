@@ -71,3 +71,26 @@ latex_engine: pdflatex
 Rendering gives the below, nice!
 
 ![Edited render](figures/render2.png)
+
+Next, we clearly need to fix the fact that section titles are now larger than the document title! Let's do this with the LaTeX `sectsty` package -- you can basically stuff this code anywhere in the preamble, like so:
+
+![Adding sectsty](figures/sectsty.png)
+
+Let's also reduce the overall margins a touch via the `geometry` argument in the YAML while we're at it. 
+
+```
+---
+title: "A short report"
+author: "Travis Gerke"
+date: "`r format(Sys.time(), '%Y %B %d')`"
+output: 
+   pdf_document: 
+      template: template.tex
+      keep_tex: true
+geometry: margin=1in
+latex_engine: pdflatex
+---
+```
+
+![Edited render](figures/render3.png)
+

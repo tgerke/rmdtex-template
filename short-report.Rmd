@@ -6,6 +6,7 @@ output:
    pdf_document: 
       template: template.tex
       keep_tex: true
+geometry: margin=1in
 latex_engine: pdflatex
 ---
    
