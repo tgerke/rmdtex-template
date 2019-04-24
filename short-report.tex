@@ -1,0 +1,167 @@
+\documentclass[]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\hypersetup{unicode=true,
+            pdftitle={A short report},
+            pdfauthor={Travis Gerke},
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+%%% Use protect on footnotes to avoid problems with footnotes in titles
+\let\rmarkdownfootnote\footnote%
+\def\footnote{\protect\rmarkdownfootnote}
+
+%%% Change title format to be more compact
+\usepackage{titling}
+
+% Create subtitle command for use in maketitle
+\newcommand{\subtitle}[1]{
+  \posttitle{
+    \begin{center}\large#1\end{center}
+    }
+}
+
+\setlength{\droptitle}{-2em}
+
+  \title{A short report}
+    \pretitle{\vspace{\droptitle}\centering\huge}
+  \posttitle{\par}
+    \author{Travis Gerke}
+    \preauthor{\centering\large\emph}
+  \postauthor{\par}
+      \predate{\centering\large\emph}
+  \postdate{\par}
+    \date{2019 April 24}
+
+
+\begin{document}
+\maketitle
+
+\hypertarget{introduction}{%
+\section{Introduction}\label{introduction}}
+
+Lorem ipsum dolor sit amet, purus cubilia, taciti ipsum faucibus
+imperdiet turpis, vel, sollicitudin convallis. Proin justo elementum
+nibh augue habitasse tincidunt, ac fusce vivamus. Scelerisque sagittis
+ante potenti ligula nam venenatis. Placerat ultrices lacus porttitor
+non, quis ante, non, justo eu aptent, sed. Mattis vitae sit diam mauris
+porta nunc nibh nunc est. Sed, in erat varius eros sed ac hendrerit eros
+suspendisse auctor sollicitudin laoreet tellus urna tincidunt. Magnis
+quis at conubia enim dictumst hac id velit. Eros volutpat odio risus.
+Vulputate habitant urna mauris tellus egestas donec quis.
+
+Purus dapibus per nulla ligula. Justo sagittis et in vitae, molestie
+dolor ac dolor. Purus mauris aliquam lobortis. Ut in nunc arcu commodo
+nam velit vestibulum. Dictumst convallis nec lectus nunc sed velit
+hendrerit sed. Lobortis eu sociis sem aenean phasellus penatibus blandit
+aliquet. Ridiculus in sed augue ornare rhoncus, purus. Ut non magna
+integer nec nisl, efficitur posuere vel aenean nibh. In tempor vehicula
+scelerisque vehicula ad adipiscing. Cursus a quis mi condimentum sit.
+Mus neque pharetra aliquam purus nec cum et.
+
+\hypertarget{progress}{%
+\section{Progress}\label{progress}}
+
+Tortor viverra accumsan sed cras cubilia nec gravida, sed in. Donec ac
+varius ullamcorper, quam lacus tellus sit tristique blandit ut. Aliquet,
+suspendisse lectus nullam nec, id. At, quis interdum, ipsum aliquet
+morbi semper facilisis maecenas sed magna magna. In sem libero arcu
+lacinia sed, vel vitae finibus. Varius convallis sem suspendisse
+aliquam. Ultrices nullam tristique habitant et nisi ullamcorper nunc.
+Sed, vitae eget per, et. Sed dictumst leo, at pellentesque dolor risus
+nisl pretium quisque, ut netus habitasse. Fusce montes, sed maximus
+ligula elementum nisi in. Ac etiam nam nec, ac metus. Morbi vestibulum
+lorem urna eget mus sapien odio aliquam donec hac, morbi finibus.
+
+Eu lorem, a ut natoque primis, elit lacus. Tristique velit non eget
+scelerisque justo cursus. Ligula tempor mauris felis ut sed nullam
+vitae. Tristique at in duis lacus donec mauris. Quis vulputate lacus,
+molestie justo rutrum felis ultricies ultricies urna. Ligula non? Eu
+suspendisse ornare, pulvinar ipsum porta eu. Euismod penatibus tempor
+turpis efficitur, non euismod sit conubia ac. Magnis fringilla,
+penatibus ac cum ut pellentesque sed proin.
+
+\hypertarget{future-directions}{%
+\section{Future Directions}\label{future-directions}}
+
+Vel platea, eleifend, ultricies natoque velit etiam vivamus maximus.
+Class, ornare sed eget, morbi adipiscing, suscipit non purus in magna.
+Suspendisse curae diam, duis ut consectetur tristique nisi, ipsum
+egestas sed. Malesuada faucibus sem penatibus. Nec in et magna velit
+dictum cum. Litora nulla! Eget cras nec, nibh. Lobortis urna vel
+natoque, sed habitant id nulla, nulla ac. Ac, hendrerit sollicitudin,
+etiam quis. At non aenean a ut. Eros ut vitae sed et.
+
+Nec eget feugiat euismod tincidunt leo. Montes himenaeos facilisis
+pharetra congue elementum sed in luctus lacus. Massa dis enim blandit
+sed ligula ante. Iaculis sapien tempus neque tortor diam placerat,
+aenean. Venenatis sociosqu amet sed habitant, felis vel, dictumst hac,
+in aliquam. Non dis vestibulum rutrum, ut laoreet neque varius amet
+nibh, lorem magna. In ultrices maecenas et eu vestibulum turpis at.
+Class ullamcorper eu vestibulum ornare orci parturient suspendisse eu
+ultricies. Maximus magnis, tempor turpis a semper. Facilisis, et
+lacinia, pretium ligula tristique hendrerit mauris. Ut urna potenti
+risus ac conubia.
+
+Dis diam egestas cras fermentum, ac, in mus luctus. Non quis. Penatibus
+parturient eget proin et pharetra torquent neque vel tincidunt. Ut
+ornare scelerisque nec commodo. Ac lectus tincidunt maximus, eu in sed
+bibendum sed mauris interdum. Ut vel cum volutpat sociis proin amet. Sit
+litora, ac feugiat et sollicitudin lacus mattis varius. Et porttitor
+cursus, efficitur erat et, augue. Vel phasellus quis sit lacinia orci
+nec inceptos rutrum. Eget mollis nascetur per orci aliquam litora in
+hac.
+
+
+\end{document}

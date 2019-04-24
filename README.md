@@ -11,7 +11,7 @@ author: "Travis Gerke"
 date: "`r format(Sys.time(), '%Y %B %d')`"
 output: 
    pdf_document: 
-   keep_tex: true
+      keep_tex: yes
 latex_engine: pdflatex
 ---
    
