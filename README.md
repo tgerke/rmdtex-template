@@ -27,3 +27,4 @@ latex_engine: pdflatex
 
 `r paste(stringi::stri_rand_lipsum(3, start_lipsum = FALSE), collapse = "\n\n")`
 ```
+![Default rendered pdf](figures/default.png)
