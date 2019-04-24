@@ -28,3 +28,10 @@ latex_engine: pdflatex
 `r paste(stringi::stri_rand_lipsum(3, start_lipsum = FALSE), collapse = "\n\n")`
 ```
 ![Default rendered pdf](figures/default.png)
+
+Now, two specific things I'd like to change are: 
+
+* Left-justify the title/author/date section
+* Modify the font specs used in section titles
+
+A solution to these two problems easily generalizes to the broader question of "How do I format the title and H1-H6 specs in the context of LaTeX rendering from `.Rmd` files?"
