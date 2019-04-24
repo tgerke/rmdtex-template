@@ -10,16 +10,12 @@ latex_engine: pdflatex
    
 # Introduction
 
-`r paste(stringi::stri_rand_lipsum(3), collapse = "\n\n")`
+`r paste(stringi::stri_rand_lipsum(2), collapse = "\n\n")`
 
-# Methods
+# Progress
 
-`r paste(stringi::stri_rand_lipsum(3, start_lipsum = FALSE), collapse = "\n\n")`
+`r paste(stringi::stri_rand_lipsum(2, start_lipsum = FALSE), collapse = "\n\n")`
 
-# Results
-
-`r paste(stringi::stri_rand_lipsum(3, start_lipsum = FALSE), collapse = "\n\n")`
-
-# Discussion
+# Future Directions
 
 `r paste(stringi::stri_rand_lipsum(3, start_lipsum = FALSE), collapse = "\n\n")`
