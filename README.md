@@ -132,6 +132,23 @@ latex_engine: pdflatex
 
 ![Edited render](figures/render4.png)
 
-With this trick, you can start to do even fancier things (literally), such as include `fancyhdr` options. 
+With this trick, you can start to do even fancier things (literally), such as include `fancyhdr` options. This option is ultimately included in the `template.tex` provided in the [repository](https://github.com/tgerke/rmdtex-template), and here's the relevant YAML and output:
+
+```
+---
+title: "A short report"
+author: "Travis Gerke"
+date: "`r format(Sys.time(), '%Y %B %d')`"
+output: 
+   pdf_document: 
+      template: template.tex
+      keep_tex: true
+params: 
+   subtitle: "FY 2018"
+   fancy: true
+geometry: margin=1in
+latex_engine: pdflatex
+---
+```
 
 ![Edited render](figures/fancy.png)
