@@ -256,11 +256,11 @@ $endfor$
 \subsectionfont{\normalsize\normalfont}
 
 % use fancyhdr style
-$if(params.fancy)$
+$if(fancy)$
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhead[LO, LE]{$title$}
-\fancyhead[RO, RE]{$params.subtitle$}
+\fancyhead[RO, RE]{$my_subtitle$}
 \makeatletter
 \renewcommand{\maketitle}{\bgroup\vspace*{-1cm}\setlength{\parindent}{0pt}
 \begin{flushleft}
@@ -277,8 +277,8 @@ $else$
 \begin{flushleft}
   \textbf{\@title}
   
-  $if(params.subtitle)$
-  \emph{$params.subtitle$}
+  $if(my_subtitle)$
+  \emph{$my_subtitle$}
   $endif$
   
   \@author
