@@ -110,7 +110,7 @@ Mission accomplished!
 
 --- 
 
-Here's a bonus I learned along the way. You can send custom arguments to your `.tex` doc by simply defining new variables in the YAML header (relevant info in the pandoc docs [here](https://pandoc.org/MANUAL.html#extension-yaml_metadata_block). Suppose I want an optional subtitle parameter. This is accomplished like so:
+Here's a bonus I learned along the way. You can send custom arguments to your `.tex` doc by simply defining new variables in the YAML header (relevant info in the pandoc docs [here](https://pandoc.org/MANUAL.html#extension-yaml_metadata_block)). Suppose I want an optional subtitle parameter. This is accomplished like so:
 
 ```
 ---
