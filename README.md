@@ -110,7 +110,7 @@ Mission accomplished!
 
 --- 
 
-Here's a bonus I learned along the way. You can send custom arguments to your `.tex` doc via YAML with the `params:` construction. Suppose I want an optional subtitle parameter. This is accomplished like so:
+Here's a bonus I learned along the way. You can send custom arguments to your `.tex` doc by simply defining new variables in the YAML header (relevant info in the pandoc docs [here](https://pandoc.org/MANUAL.html#extension-yaml_metadata_block). Suppose I want an optional subtitle parameter. This is accomplished like so:
 
 ```
 ---
@@ -121,8 +121,7 @@ output:
    pdf_document: 
       template: template.tex
       keep_tex: true
-params: 
-   subtitle: "FY 2018"
+my_subtitle: "FY 2018"
 geometry: margin=1in
 latex_engine: pdflatex
 ---
@@ -143,9 +142,8 @@ output:
    pdf_document: 
       template: template.tex
       keep_tex: true
-params: 
-   subtitle: "FY 2018"
-   fancy: true
+my_subtitle: "FY 2018"
+fancy: true
 geometry: margin=1in
 latex_engine: pdflatex
 ---
